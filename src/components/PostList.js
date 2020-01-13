@@ -52,9 +52,9 @@ export default class IndexPage extends React.Component {
                   <CardSubtitle>
                     <small>
                       {post.date} - posted by{' '}
-                      <Link to={`/author/${post.author.slug}`}>
+                     
                         {post.author.name}
-                      </Link>
+                      
                     </small>
                   </CardSubtitle>
 
