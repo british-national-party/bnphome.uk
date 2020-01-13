@@ -24,7 +24,7 @@ const MainNavBar = (props) => {
   return (
    
     <div>
-      <Navbar color="black" dark expand="md" fixed="top">
+      <Navbar color="#630a16" dark expand="md" fixed="top">
       <NavbarBrand><div id="logo"> <img class="logo" src={logo} alt="BNP" style={{ width: '44px' }} /></div></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
