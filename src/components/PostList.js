@@ -1,6 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import {
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button,
+} from 'reactstrap'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -10,36 +19,60 @@ export default class IndexPage extends React.Component {
       <section className="section">
         <div className="container">
           <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">{title}</h1>
+            <h1 className="edi-title">{title}</h1>
           </div>
+
           {posts.map(({ node: post }) => (
             <div
+              id="content-edi"
               className="content"
-              style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
+              style={{
+                border: '1px solid #eaecee',
+                padding: '1em 1em',
+                background: '#fff',
+              }}
               key={post.id}
             >
-              <p>
-                <Link className="has-text-primary" to={post.slug}>
-                  {post.title}
-                </Link>
-                <span> &bull; </span>
-                <small>
-                  {post.date} - posted by{' '}
-                  <Link to={`/author/${post.author.slug}`}>
-                    {post.author.name}
+              <Card>
+                {post.featured_media && (
+                  <CardImg
+                    src={
+                      post.featured_media.localFile.childImageSharp.fluid.src
+                    }
+                    alt-text={post.featured_media.alt_text}
+                  />
+                )}
+
+                <CardBody>
+                  <CardTitle>
+                    <Link className="has-text-primary" to={post.slug}>
+                      {post.title}
+                    </Link>
+                  </CardTitle>
+                  <CardSubtitle>
+                    <small>
+                      {post.date} - posted by{' '}
+                      <Link to={`/author/${post.author.slug}`}>
+                        {post.author.name}
+                      </Link>
+                    </small>
+                  </CardSubtitle>
+
+                  <CardText>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: post.excerpt.replace(
+                          /<p class="link-more.*/,
+                          ''
+                        ),
+                      }}
+                    />
+                  </CardText>
+                  <Link className="btn btn-primary" to={post.slug}>
+                    Keep Reading →
                   </Link>
-                </small>
-              </p>
-              <div>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: post.excerpt.replace(/<p class="link-more.*/, ''),
-                  }}
-                />
-                <Link className="button is-small" to={post.slug}>
-                  Keep Reading →
-                </Link>
-              </div>
+                </CardBody>
+              </Card>
             </div>
           ))}
         </div>
@@ -67,5 +100,16 @@ export const pageQuery = graphql`
     }
     date(formatString: "MMMM DD, YYYY")
     slug
+    featured_media {
+      alt_text
+      source_url
+      localFile {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            src
+          }
+        }
+      }
+    }
   }
 `

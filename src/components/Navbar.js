@@ -1,59 +1,92 @@
-import React from 'react'
-import { Link, StaticQuery, graphql } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import { Link } from 'gatsby'
+import React, { useState } from 'react';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from 'reactstrap';
+import logo from '../img/bnp-logo.jpg'
 
-const Navbar = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        allWordpressPage(sort: { fields: wordpress_id }, limit: 5) {
-          edges {
-            node {
-              title
-              slug
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <nav className="navbar is-transparent">
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item">
-              <figure className="image">
-                <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-              </figure>
-            </Link>
-          </div>
-          <div className="navbar-start">
-            {data.allWordpressPage.edges.map(edge => (
-              <Link
-                className="navbar-item"
-                to={edge.node.slug}
-                key={edge.node.slug}
-              >
-                {edge.node.title}
-              </Link>
-            ))}
-          </div>
-          <div className="navbar-end">
-            <a
-              className="navbar-item"
-              href="https://github.com/GatsbyCentral/gatsby-starter-wordpress"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="icon">
-                <img src={github} alt="Github" />
-              </span>
-            </a>
-          </div>
-        </div>
-      </nav>
-    )}
-  />
-)
 
-export default Navbar
+
+const MainNavBar = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
+  return (
+   
+    <div>
+      <Navbar color="black" dark expand="md" fixed="top">
+      <NavbarBrand><div id="logo"> <img class="logo" src={logo} alt="BNP" style={{ width: '44px' }} /></div></NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="mr-auto" navbar>
+            <NavItem>
+              <Link to="/" className="nav-link">News</Link>     
+            </NavItem>
+            
+            <UncontrolledDropdown dark nav inNavbar>
+              <DropdownToggle nav caret>
+                About Us
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem>
+                  <Link to="/introduction" className="dropdown-item">Introduction</Link>
+                </DropdownItem>
+                <DropdownItem divider/>
+                <DropdownItem>
+                  <Link to="/policy-animal-welfare" className="dropdown-item">Animal welfare</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  <Link to="/policy-british-culture" className="dropdown-item">British culture</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  <Link to="/policy-defence" className="dropdown-item">Defence</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  <Link to="/policy-democracy" className="dropdown-item">Democracy</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  <Link to="/policy-education" className="dropdown-item">Education</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  <Link to="/policy-energy" className="dropdown-item">Energy</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  <Link to="/policy-health" className="dropdown-item">Health</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  <Link to="/policy-housing" className="dropdown-item">Housing</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  <Link to="/policy-immigration" className="dropdown-item">Immigration</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  <Link to="/policy-law-and-order" className="dropdown-item">Law and order</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  <Link to="/policy-reversing-islamisation" className="dropdown-item">Islamisation</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  <Link to="/policy-senior-citizens" className="dropdown-item">Senior Citizens</Link>
+                </DropdownItem>
+              
+              </DropdownMenu>
+            </UncontrolledDropdown>
+          </Nav>
+          
+        </Collapse>
+      </Navbar>
+    </div>
+  );
+}
+
+export default MainNavBar;

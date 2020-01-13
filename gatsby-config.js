@@ -4,6 +4,13 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/assets/images`
+      }
+    },
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-wordpress',
@@ -19,8 +26,8 @@ module.exports = {
         auth: {},
         // Set to true to debug endpoints on 'gatsby build'
         verboseOutput: false,
-      },
-    },
+                },
+    },    
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
