@@ -8,7 +8,6 @@ import {
   CardBody,
   CardTitle,
   CardSubtitle,
-  Button,
 } from 'reactstrap'
 
 export default class IndexPage extends React.Component {
