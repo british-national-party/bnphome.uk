@@ -35,12 +35,14 @@ export default class IndexPage extends React.Component {
             >
               <Card>
                 {post.featured_media && (
+                  <Link className="has-text-primary" to={post.slug}>
                   <CardImg
                     src={
                       post.featured_media.localFile.childImageSharp.fluid.src
                     }
                     alt-text={post.featured_media.alt_text}
                   />
+                  </Link>
                 )}
 
                 <CardBody>
