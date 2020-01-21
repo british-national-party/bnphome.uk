@@ -47,7 +47,7 @@
 }
 
 body {
-  background-color:#00072D;
+  background-color:$dark-gray;
   margin: 0px;
 
 }
@@ -68,7 +68,7 @@ h1 {
   text-align: center;
 }
 .navbar {
-  background-color:$bnp-blue;
+  background-color:$dark;
   // border-right: 1px solid rgba(0, 0, 0, 0.4);
   // border-left: 1px solid rgba(0, 0, 0, 0.4);
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
