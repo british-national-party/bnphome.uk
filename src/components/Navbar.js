@@ -1,5 +1,5 @@
 import { Link } from 'gatsby'
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import {
   Collapse,
   Navbar,
@@ -12,9 +12,9 @@ import {
   DropdownMenu,
   DropdownItem,
 } from 'reactstrap';
+import Media from 'react-media';
 import logo from '../img/bnp-logo.jpg'
-
-
+import logolarge from '../img/british-national-party.png'
 
 const MainNavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +25,35 @@ const MainNavBar = (props) => {
    
     <div>
       <Navbar color="#630a16" dark expand="md" fixed="top">
-      <NavbarBrand><div id="logo"> <img class="logo" src={logo} alt="BNP" style={{ width: '44px' }} /></div></NavbarBrand>
+            
+      <div>
+        
+        <Media queries={{
+            small: "(max-width: 599px)",
+            large: "(min-width: 600px)"
+          }}>
+            {matches => (
+              <Fragment>
+                {matches.small && 
+                
+                  <NavbarBrand><div id="logo"> <img class="logo" src={logo} alt="BNP" style={{ width: '44px' }} /></div></NavbarBrand>
+                  
+                }              
+             
+                {matches.large && 
+              
+                  <NavbarBrand><div id="logo"> <img class="logo" src={logolarge} alt="BNP" style={{ width: '200px' }} /></div></NavbarBrand>
+                  
+                }
+            
+              </Fragment>
+          )}
+        </Media>
+        
+      </div>
+      
+      
+      
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>

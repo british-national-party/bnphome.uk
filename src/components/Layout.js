@@ -9,7 +9,7 @@ const TemplateWrapper = ({ children }) => (
     <MainNavBar />
     <div>
       <p>&lt;</p>
-      <p>&lt;</p>    
+      <p>&lt;</p>   
     </div>
     <div>{children}</div>
   </div>
