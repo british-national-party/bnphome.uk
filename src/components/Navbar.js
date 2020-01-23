@@ -23,11 +23,11 @@ const MainNavBar = (props) => {
 
   return (
    
-    <div>
+    
       <Navbar color="#630a16" dark expand="md" fixed="top">
-            
+        <div className="container">
       <div>
-        
+      
         <Media queries={{
             small: "(max-width: 599px)",
             large: "(min-width: 600px)"
@@ -112,8 +112,8 @@ const MainNavBar = (props) => {
           </Nav>
           
         </Collapse>
+        </div>
       </Navbar>
-    </div>
   );
 }
 
