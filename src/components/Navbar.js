@@ -36,7 +36,7 @@ const MainNavBar = (props) => {
               <Fragment>
                 {matches.small && 
                 
-                  <NavbarBrand><div id="logo"> <img class="logo" src={logolarge} alt="BNP" style={{ width: '100px' }} /></div></NavbarBrand>
+                  <NavbarBrand><div id="logo"> <img class="logo" src={logolarge} alt="BNP" style={{ width: '200px' }} /></div></NavbarBrand>
                   
                 }              
              
@@ -52,8 +52,7 @@ const MainNavBar = (props) => {
         
       </div>
       
-      
-      
+            
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
