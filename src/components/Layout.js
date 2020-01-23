@@ -6,12 +6,13 @@ import '../styles/index.scss'
 const TemplateWrapper = ({ children }) => (
   <div div className="main-body">
     <Helmet title="HOME | British National Party" />      
-    
+   
    
     <MainNavBar />
     <div>
-      <p>&lt;</p>
-      <p>&lt;</p>   
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>    
     </div>
     <div>{children}</div>
     

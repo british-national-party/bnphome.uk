@@ -36,13 +36,13 @@ const MainNavBar = (props) => {
               <Fragment>
                 {matches.small && 
                 
-                  <NavbarBrand><div id="logo"> <img class="logo" src={logo} alt="BNP" style={{ width: '44px' }} /></div></NavbarBrand>
+                  <NavbarBrand><div id="logo"> <img class="logo" src={logolarge} alt="BNP" style={{ width: '100px' }} /></div></NavbarBrand>
                   
                 }              
              
                 {matches.large && 
               
-                  <NavbarBrand><div id="logo"> <img class="logo" src={logolarge} alt="BNP" style={{ width: '200px' }} /></div></NavbarBrand>
+                  <NavbarBrand><div id="logo"> <img class="logo" src={logolarge} alt="BNP" style={{ width: '350px' }} /></div></NavbarBrand>
                   
                 }
             
