@@ -1,5 +1,5 @@
 import { Link } from 'gatsby'
-import React, { useState, Fragment } from 'react';
+import React, { useState } from 'react';
 import {
   Collapse,
   Navbar,
@@ -12,7 +12,7 @@ import {
   DropdownMenu,
   DropdownItem,
 } from 'reactstrap';
-import Media from 'react-media';
+
 import logo from '../img/british-national-party.png'
 
 const MainNavBar = (props) => {
@@ -25,31 +25,7 @@ const MainNavBar = (props) => {
     
       <Navbar color="#630a16" dark expand="md" fixed="top">
         <div className="container">
-      <div>
-      
-        <Media queries={{
-            small: "(max-width: 599px)",
-            large: "(min-width: 600px)"
-          }}>
-            {matches => (
-              <Fragment>
-                {matches.small && 
-                
-                  <NavbarBrand><div id="logo"> <img class="logo" src={logo} alt="BNP" style={{ width: '200px' }} /></div></NavbarBrand>
-                  
-                }              
-             
-                {matches.large && 
-              
-                  <NavbarBrand><div id="logo"> <img class="logo" src={logo} alt="BNP" style={{ width: '350px' }} /></div></NavbarBrand>
-                  
-                }
-            
-              </Fragment>
-          )}
-        </Media>
-        
-      </div>
+        <NavbarBrand><div id="logo"> <img class="logo" src={logo} alt="BNP" /></div></NavbarBrand>
       
             
         <NavbarToggler onClick={toggle} />
