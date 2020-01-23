@@ -13,8 +13,7 @@ import {
   DropdownItem,
 } from 'reactstrap';
 import Media from 'react-media';
-import logo from '../img/bnp-logo.jpg'
-import logolarge from '../img/british-national-party.png'
+import logo from '../img/british-national-party.png'
 
 const MainNavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,13 +35,13 @@ const MainNavBar = (props) => {
               <Fragment>
                 {matches.small && 
                 
-                  <NavbarBrand><div id="logo"> <img class="logo" src={logolarge} alt="BNP" style={{ width: '200px' }} /></div></NavbarBrand>
+                  <NavbarBrand><div id="logo"> <img class="logo" src={logo} alt="BNP" style={{ width: '200px' }} /></div></NavbarBrand>
                   
                 }              
              
                 {matches.large && 
               
-                  <NavbarBrand><div id="logo"> <img class="logo" src={logolarge} alt="BNP" style={{ width: '350px' }} /></div></NavbarBrand>
+                  <NavbarBrand><div id="logo"> <img class="logo" src={logo} alt="BNP" style={{ width: '350px' }} /></div></NavbarBrand>
                   
                 }
             
