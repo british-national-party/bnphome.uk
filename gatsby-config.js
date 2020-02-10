@@ -30,6 +30,7 @@ module.exports = {
     },    
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-favicon',
     {
       // Removes unused css rules
       resolve:'gatsby-plugin-purgecss',
