@@ -34,7 +34,15 @@ const MainNavBar = (props) => {
             <NavItem>
               <Link to="/" className="nav-link">News</Link>     
             </NavItem>
-            
+            <NavItem>
+              <a href="https://forms.bnphome.uk/form-5284536/membership" className="nav-link" target="blank">Membership</a>
+            </NavItem>
+            <NavItem>
+              <a href="https://forms.bnphome.uk/form-5286789/donation" className="nav-link" target="blank">Donate</a>
+            </NavItem>
+            <NavItem>
+              <a href="https://forms.bnphome.uk/form-5306742/contact-us" className="nav-link" target="blank">Contact Us</a>
+            </NavItem>
             <UncontrolledDropdown dark nav inNavbar>
               <DropdownToggle nav caret>
                 About Us
