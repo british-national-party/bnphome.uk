@@ -274,4 +274,11 @@ background-color: $bnp-yellow;
 margin-top: -10px;
  }
  
- .footer-container { grid-column:2 / 3;display: grid; /* ACTING AS A GRID CONTAINER */ grid-template-columns: 2fr 2fr 2fr 3fr; grid-template-rows: auto auto; grid-template-areas: "copyright address"; }
+ .footer-container { grid-column:2 / 3;display: grid; /* ACTING AS A GRID CONTAINER */ grid-template-columns: 2fr 2fr 2fr 3fr; grid-template-rows: auto auto; grid-template-areas: "copyright address constitution"; }
+
+ .section.section.section--gradient {
+   max-width:1110px;
+   margin: auto;
+   width: 50%;
+ }
+
