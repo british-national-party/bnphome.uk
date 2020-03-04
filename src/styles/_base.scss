@@ -251,7 +251,8 @@ height: auto;
   margin-left: 20px;
 }
 
-div {
+
+#gatsby-focus-wrapper > div {
   background-image: url('../img/bg.png');
   background-size: cover;
   background-repeat: no-repeat;
