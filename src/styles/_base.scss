@@ -260,7 +260,7 @@ height: auto;
  }
 
  div.footer {
-  display: grid; grid-template-columns: 14vw 2fr 2vw; grid-template-rows: auto auto;
+  display: grid; grid-template-columns: 3vw 4fr 3vw; grid-template-rows: auto auto;
   padding-top: 20px;
   padding-bottom:20px;
   font-weight: bold;
@@ -269,7 +269,7 @@ background-color: $bnp-yellow;
 margin-top: -10px;
  }
  
- .footer-container { grid-column:2 / 3;display: grid; /* ACTING AS A GRID CONTAINER */ grid-template-columns: 2fr 2fr 2fr 3fr; grid-template-rows: auto auto; grid-template-areas: "copyright address constitution"; }
+ .footer-container { grid-column:2 / 4;display: grid; /* ACTING AS A GRID CONTAINER */ grid-template-columns: 2fr 2fr 2fr; grid-template-rows: auto auto; grid-template-areas: "copyright address constitution"; }
 
  .section.section.section--gradient {
    max-width:1110px;
@@ -277,3 +277,14 @@ margin-top: -10px;
    width: 100%;
  }
 
+ .copyright 
+{
+  font-size:0.8em;
+}
+.address 
+{
+  font-size:0.8em;
+}
+.constitution {
+  font-size:0.8em;
+}
