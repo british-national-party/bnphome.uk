@@ -26,8 +26,10 @@
 .page-section {
   background-color: #fff;
   margin-left: 10px;
-  margin-right: 10px; 
+  margin-right: 10px;
+  margin-bottom:0px; 
   padding: 20px;
+  padding-bottom:0px;
 }
 
 
@@ -42,6 +44,7 @@
 
   background-color: #fff;
   padding-top: 1em;
+  padding-bottom: 2em;
 }
 
 body {
@@ -239,6 +242,12 @@ font-size:1.5em;
 
 }
 
+#gatsby-focus-wrapper > div > div:nth-child(3) > section > div > div:nth-child(1) > h1 {
+
+  color: black;
+  background-color: $bnp-yellow;
+}
+
 
 .wp-block-image > img {
 
@@ -257,3 +266,12 @@ height: auto;
   background-size: cover;
   background-repeat: no-repeat;
  }
+
+ div.footer {
+  display: grid; grid-template-columns: 14vw 2fr 2vw; grid-template-rows: auto auto;
+
+background-color: $bnp-yellow;
+margin-top: -10px;
+ }
+ 
+ .footer-container { grid-column:2 / 3;display: grid; /* ACTING AS A GRID CONTAINER */ grid-template-columns: 2fr 2fr 2fr 3fr; grid-template-rows: auto auto; grid-template-areas: "copyright address"; }

@@ -25,7 +25,7 @@ const MainNavBar = (props) => {
     
       <Navbar color="#630a16" dark expand="md" fixed="top">
         <div className="container">
-        <NavbarBrand><div id="logo"> <img class="logo" src={logo} alt="BNP" /></div></NavbarBrand>
+        <Link to="/"><NavbarBrand><div id="logo"> <img class="logo" src={logo} alt="BNP" /></div></NavbarBrand></Link>
       
             
         <NavbarToggler onClick={toggle} />
