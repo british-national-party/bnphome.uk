@@ -28,7 +28,7 @@ export const BlogPostTemplate = ({
             <div style={{ marginTop: `4rem` }}>
               <p>
                 {date} - posted by{' '}
-                <Link to={`/author/${author.slug}`}>{author.name}</Link>
+                {author.name}
               </p>
               {categories && categories.length ? (
                 <div>
