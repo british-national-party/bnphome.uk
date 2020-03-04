@@ -269,6 +269,9 @@ height: auto;
 
  div.footer {
   display: grid; grid-template-columns: 14vw 2fr 2vw; grid-template-rows: auto auto;
+  padding-top: 20px;
+  padding-bottom:20px;
+  font-weight: bold;
 
 background-color: $bnp-yellow;
 margin-top: -10px;
