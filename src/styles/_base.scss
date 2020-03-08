@@ -179,6 +179,28 @@ font-size: 1.4em;
   color: $dropdown-link-color;
 }
 
+.nav-link {
+
+  font-size: 0.9em;
+  
+  }
+.navbar-brand {
+  max-width: 225px;
+}
+#logo img{
+  display:inline-flex;
+  margin: 0 auto;
+  width:225px;
+}
+
+.dropdown-item {
+  font-size:0.8rem;
+  display: block;
+  width: 100%;
+  padding: 0.1rem 0.5rem;
+}
+
+
 
 .has-text-primary {
 

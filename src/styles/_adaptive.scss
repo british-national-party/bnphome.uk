@@ -4,6 +4,11 @@
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { 
 
+    .nav-link {
+
+        font-size: 0.9em;
+        
+        }
     .navbar-brand {
         max-width: 225px;
     }
@@ -11,6 +16,13 @@
         display:inline-flex;
         margin: 0 auto;
         width:225px;
+      }
+
+      .dropdown-item {
+        font-size:0.8rem;
+        display: block;
+        width: 100%;
+        padding: 0.1rem 0.5rem;
       }
 
  }
@@ -22,17 +34,24 @@
     .navbar-brand {
         max-width: 250px;
     }
-    .nav-link {
-
-        font-size: 0.9em;
-        
-        }
+   
     #logo img{
         display:inline-flex;
         margin: 0 auto;
         width:250px;
       }
 
+      .nav-link {
+
+        font-size: 0.9em;
+        
+        }
+      .dropdown-item {
+        font-size:1rem;
+        display: block;
+        width: 100%;
+        padding: 0.1rem 0.5rem;
+      }
 
  }
 
@@ -44,6 +63,14 @@
         font-size: 1.2em;
         
         }
+
+        
+          .dropdown-item {
+            font-size:1.4rem;
+            display: block;
+            width: 100%;
+            padding: 0.2rem 0.5rem;
+          }
 
     .navbar-brand {
         max-width: 300px;
