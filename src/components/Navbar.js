@@ -35,13 +35,13 @@ const MainNavBar = (props) => {
               <Link to="/" className="nav-link">News</Link>     
             </NavItem>
             <NavItem>
-              <a href="https://forms.bnp.org.uk/form-5284536/membership" target="_blank" className="nav-link">Membership</a>
+              <a href="https://forms.bnphome.uk/form-5284536/membership" target="_blank" className="nav-link">Membership</a>
             </NavItem>
             <NavItem>
-              <a href="https://forms.bnp.org.uk/form-5286789/donation" target="_blank" className="nav-link">Donate</a>
+              <a href="https://forms.bnphome.uk/form-5286789/donation" target="_blank" className="nav-link">Donate</a>
             </NavItem>
             <NavItem>
-              <a href="https://forms.bnp.org.uk/form-5306742/contact-us" target="_blank" className="nav-link">Contact Us</a>
+              <a href="https://forms.bnphome.uk/form-5306742/contact-us" target="_blank" className="nav-link">Contact Us</a>
             </NavItem>
             <UncontrolledDropdown dark nav inNavbar>
               <DropdownToggle nav caret>
